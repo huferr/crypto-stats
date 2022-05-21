@@ -26,7 +26,7 @@ const Home: NextPage = () => {
 
       <div className={styles.topbar}>
         <p className={styles.label}>Search:
-          <input className={styles.input} type='text' value={search} onChange={(e) => setSearch(e.target.value)} />
+          <input className={styles.input} type='text' placeholder='Choose a Crypto' value={search} onChange={(e) => setSearch(e.target.value)} />
         </p>
         <p className={styles.label}>Base currency:
           <select className={styles.select} onChange={(e: ChangeEvent<HTMLSelectElement>) => setCurrency(e.target.value)}>
