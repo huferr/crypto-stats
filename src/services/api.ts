@@ -5,14 +5,14 @@ const apiBase = axios.create({
   baseURL: 'https://api.coinstats.app/public/v1'
 });
 
-const getCoins = async (params: GetCoinsTypes.params) => {
-  const res = await apiBase.get('/coins', { params });
-  return res.data as GetCoinsTypes.Response;
+const getCoins = async (params: GetCoinsTypes.Params) => {
+  const { data } = await apiBase.get('/coins', { params });
+  return data as GetCoinsTypes.Response;
 } 
 
-const getSpecificCoin = async (params: GetSpecificCoinTypes.params) => {
-  const res = await apiBase.get(`/coins/${params.name}`, { params: { currency: params.currency } })
-  return res.data as GetSpecificCoinTypes.Response
+const getSpecificCoin = async (params: GetSpecificCoinTypes.Params) => {
+  const { data } = await apiBase.get(`/coins/${params.name}`, { params: { currency: params.currency } })
+  return data as GetSpecificCoinTypes.Response
 }
 
 export const api = {

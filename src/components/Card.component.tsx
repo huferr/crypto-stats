@@ -7,19 +7,20 @@ interface CardProps {
   name: string,
   price: number,
   currency: string,
-  symbol: string
+  symbol: string,
+  url: string
 }
 
 export const Card = (props: CardProps) => {
   return (
-    <div className={styles.container}>
+    <a className={styles.container} href={props.url || ''} target='_blank' rel="noreferrer">
       <div className={styles.content}>
       <p className={styles.text}><strong>Currency:</strong> {props.name}</p>
-      <p className={styles.text}><strong>Price:</strong> {Math.floor(props.price)} {props.currency}</p>
+      <p className={styles.text}><strong>Price:</strong> {(props.price).toFixed(3)} {props.currency}</p>
       <p className={styles.text}><strong>Symbol:</strong> {props.symbol}</p>
-
+      <p className={styles.link}>Click to visit the offical website</p>
       </div>
       <img className={styles.icon} src={props.icon || ''} alt='currency icon' />
-    </div>
+    </a>
   )
 }

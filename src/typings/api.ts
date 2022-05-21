@@ -20,7 +20,7 @@ interface Coin {
 }
 
 export declare namespace GetSpecificCoinTypes {
-  interface params {
+  interface Params {
     name: string,
     currency: string
   }
@@ -31,7 +31,7 @@ export declare namespace GetSpecificCoinTypes {
 }
 
 export declare namespace GetCoinsTypes {
-  interface params {
+  interface Params {
     skip?: number,
     limit?: number,
     currency: string
