@@ -1,0 +1,35 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 56px;
+  color: #0387d3;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+.list {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.select {
+  width: 100px;
+  height: 30px;
+  margin-left: 20px;
+}
